@@ -1,0 +1,48 @@
+<!DOCTYPE HTML> <html lang="en"><head> <meta charset="utf-8"> <link rel="stylesheet" href="/assets/css/main.css"> <link rel="stylesheet" href="/assets/css/fontello/css/jmagunia.min.css"> <link rel="stylesheet" href="/assets/css/rouge.min.css"> <meta name="viewport" content="width=device-width, initial-scale=1"> <meta name="robots" content="index, follow"> <link rel="canonical" href="https://jmagunia.com/dataset/r-dataset-package-pscl-presidentialelections"> <title>R Dataset / Package pscl / presidentialElections | On Things | Jay's Homepage</title> <meta name="description" content="On this R-data statistics page, you will find information about the presidentialElections data set which pertains to elections for U.S. President, 1932-2012, by state. The..."> <meta name="author" content="Jay Magunia"> <script async src="/assets/js/main.min.js"></script> <link href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css" rel="stylesheet"> </head> <body> <div id="headerToggle"><a href="#" class="toggle" onclick="menuToggle()" title="Open Menu"><span class="icon icon-menu"></span></a></div><div id="header"> <div class="top"><div id="logo"> <a href="https://jmagunia.com/" id="home-link"> <span class="image avatar48"><img loading="lazy" src="/assets/images/jmagunia_favicon.webp" height="55.33px" width="38.67px" alt="Avatar of Jay Magunia"></span> <h2 id="title">On Things</h2> <p>Jay's Homepage</p> </a> </div> <nav id="nav"> <ul> <li class="home"> <a href="https://jmagunia.com/" id="home-link-id"><span class="icon icon-home">Home</span></a> </li><li class="contact"> <a href="https://jmagunia.com/contact.html" id="contact-link-id"><span class="icon icon-mail">Contact</span></a> </li><li class="real-analysis"> <a href="https://jmagunia.com/real-analysis.html" id="real-analysis-link-id"><span class="icon icon-infinity">Real Analysis</span></a> </li><li class="statistics"> <a href="https://jmagunia.com/statistics.html" id="statistics-link-id"><span class="icon icon-chart-bar">Statistics</span></a> </li><li class="technology"> <a href="https://jmagunia.com/technology.html" id="technology-link-id"><span class="icon icon-desktop">Technology</span></a> </li><li class="arithmetic"> <a href="https://jmagunia.com/arithmetic.html" id="arithmetic-link-id"><span class="icon icon-chart-pie">Arithmetic</span></a> </li><li class="datasets"> <a href="https://jmagunia.com/datasets.html" id="datasets-link-id"><span class="icon icon-database">Datasets</span></a> </li><li class="spirituality"> <a href="https://jmagunia.com/spirituality.html" id="spirituality-link-id"><span class="icon icon-leaf">Spirituality</span></a> </li></ul> </nav> </div> <div class="bottom"><ul class="icons"> <li><a href="https://drupal.org/u/pmagunia" class="icon icon-drupal" title="Drupal"><span class="label">Drupal</span></a></li> <li><a href="" class="icon icon-twitter" title="Twitter"><span class="label">Twitter</span></a></li> <li><a href="https://www.linkedin.com/in/pmagunia" class="icon icon-linkedin-squared" title="LinkedIn"><span class="label">LinkedIn</span></a></li> <li><a href="https://github.com/pmagunia" class="icon icon-github-circled" title="Github"><span class="label">GitHub</span></a></li> <li><a href="https://www.upwork.com/freelancers/~015b1032d2938319a8?viewMode=1" class="icon upwork" title="Upwork">$<span class="label">Upwork</span></a></li> <li><a href="https://soundcloud.com/pmagunia" class="icon icon-soundcloud" title="SoundCloud"><span class="label">SoundCloud</span></a></li> <li><a href="https://stackoverflow.com/users/312471/pmagunia" class="icon icon-stackoverflow" title="StackOverflow"><span class="label">StackOverflow</span></a></li> </ul> </div> </div> <div id="main"> <article class="shade-two"> <div class="container"> <br> <header> <h1>R Dataset / Package pscl / presidentialElections</h1> </header> <p>November 27, 2023</p><div id="dataset-info"> <p>On this R-data statistics page, you will find information about the <span class="mono">presidentialElections</span> data set which pertains to elections for U.S. President, 1932-2012, by state. The <span class="mono">presidentialElections</span> data set is found in the <span class="mono">pscl</span> R package. You can load the <span class="mono">presidentialElections</span> data set in R by issuing the following command at the console <span class="mono">data("presidentialElections")</span>. This will load the data into a variable called <span class="mono">presidentialElections</span>. If R says the <span class="mono">presidentialElections</span> data set is not found, you can try installing the package by issuing this command <span class="mono">install.packages("pscl")</span> and then attempt to reload the data with the <span class="mono">library()</span> command. If you need to download R, you can go to the <a href="https://www.r-project.org">R project website</a>. You can download a CSV (comma separated values) version of the <span class="mono"><a href="../assets/data/csv/dataset-31287.csv">presidentialElections R data set</a></span>. The size of this file is about 29,408 bytes.</p><h2>elections for U.S. President, 1932-2012, by state</h2> <h3>Description</h3> <p>Democratic share of the presidential vote, 1932-2012, in each state and the District of Columbia.</p> <h3>Usage</h3> <pre>data(presidentialElections)</pre> <h3>Format</h3> <ul> <li> <p>statecharacter, name of state</p> </li> <li> <p>demVotenumeric, percent of the vote for president won by the Democratic candidate</p> </li> <li> <p>yearnumeric, integer</p> </li> <li> <p>southlogical, <code>TRUE</code> if state is one of the 11 states of the former Confederacy</p> </li> </ul> <h3>Note</h3> <p>1,047 observations, unbalanced panel data in long format. Hawaii and Alaska contribute data from 1960 onwards the District of Columbia contributes data from 1964 onward; Alabama has missing data for 1948 and 1964.</p> <h3>Source</h3> <p>David Leip's Atlas of U.S. Presidential Elections <a href="http://uselectionsatlas.org">http://uselectionsatlas.org</a></p> <h3>Examples</h3> <pre>
+data(presidentialElections)
+lattice::xyplot(demVote ~ year | state,
+ panel=panel.lines,
+ ylab="Democratic Vote for President (percent)",
+ xlab="Year",
+ data=presidentialElections,
+ scales=list(y=list(cex=.6),x=list(cex=.35)),
+ strip=strip.custom(par.strip.text=list(cex=.6)))## Obama vs Kerry, except DC
+y08 &lt;- presidentialElections$year==2008
+y04 &lt;- presidentialElections$year==2004
+tmpData &lt;- merge(y=presidentialElections[y08,],
+ x=presidentialElections[y04,],
+ by="state")
+tmpData &lt;- tmpData[tmpData$state!="DC",]
+xlim &lt;- range(tmpData$demVote.x,tmpData$demVote.y)
+col &lt;- rep("black",dim(tmpData)[1])
+col[tmpData$south.x] &lt;- "red"plot(demVote.y ~ demVote.x,
+ xlab="Kerry Vote Share, 2004 (percent)",
+ ylab="Obama Vote Share, 2008 (percent)",
+ xlim=xlim,
+ ylim=xlim,
+ type="n",
+ las=1,
+ data=tmpData)
+abline(0,1,lwd=2,col=gray(.65))
+ols &lt;- lm(demVote.y ~ demVote.x,
+data=tmpData)
+abline(ols,lwd=2) text(tmpData$demVote.x,
+ tmpData$demVote.y,
+ tmpData$state,
+ col=col,
+ cex=.65)
+legend(x="topleft",
+ bty="n",
+ lwd=c(2,2),
+ col=c(gray(.65),"black"),
+ legend=c("No Change from 2004","Regression"))
+legend(x="bottomright",
+ bty="n",
+ text.col=c("red","black"),
+ legend=c("South","Non-South"))</pre> <p>Dataset imported from <a href="https://www.r-project.org">https://www.r-project.org</a>.</p></div> <p id="dataset-attachments">Attachments: <code><a target="_blank" href="/assets/data/csv/dataset-31287.csv">csv</a></code>, <code><a target="_blank" href="/assets/data/json/dataset-31287.json">json</a></code></p> <div id="dataset-iframe"> <figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;iframe</span> <span class="na">src=</span><span class="s">"https://jmagunia.com/iframe/r-dataset-package-pscl-presidentialelections.html"</span> <span class="na">width=</span><span class="s">"100%"</span> <span class="na">height=</span><span class="s">"100%"</span> <span class="na">style=</span><span class="s">"border:0px"</span><span class="nt">&gt;&lt;/iframe&gt;</span></code></pre></figure> </div> <div id="grid"></div> <script>let json_file = 'dataset-31287.json';</script> </div> </article> </div> <div id="footer"> <ul class="copyright"> <li>&copy; Jay Magunia or affialiates <img src="/assets/images/flag.svg" height="16px" width="30px" alt="A photo of the United States Flag" class="my_home"></li> <li><a href="/sitemap.xml">Sitemap</a></li> <li><a href="https://jmagunia.com/2017/01/01/credits.html">Credits</a></li> <li><a href="/2017/01/01/privacy.html">Privacy</a></li> <li><a href="/2017/01/01/terms.html">Terms</a></li> <li><a target="_blank" href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fjmagunia.com%2F">Page Speed</a></li> </ul> </div> <script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script> <script async src="/assets/js/dataset.min.js"></script> <script async src="https://www.googletagmanager.com/gtag/js?id=G-LNRBXYSVG3"></script> <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LNRBXYSVG3');
+</script> </body> </html>

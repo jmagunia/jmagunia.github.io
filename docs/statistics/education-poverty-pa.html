@@ -1,0 +1,57 @@
+<!DOCTYPE HTML> <html lang="en"><head> <meta charset="utf-8"> <link rel="stylesheet" href="/assets/css/main.css"> <link rel="stylesheet" href="/assets/css/fontello/css/jmagunia.min.css"> <link rel="stylesheet" href="/assets/css/rouge.min.css"> <meta name="viewport" content="width=device-width, initial-scale=1"> <meta name="robots" content="index, follow"> <link rel="canonical" href="https://jmagunia.com/statistics/education-poverty-pa.html"> <title>Poverty and Education in Pennsylvania | On Things | Jay's Homepage</title> <meta name="description" content="It would seem that poverty and education are connected, but what does the data say? To understand this relationship, I took my survey data from..."> <meta name="author" content="Jay Magunia"> <script async src="/assets/js/main.min.js"></script> </head> <body> <div id="headerToggle"><a href="#" class="toggle" onclick="menuToggle()" title="Open Menu"><span class="icon icon-menu"></span></a></div><div id="header"> <div class="top"><div id="logo"> <a href="https://jmagunia.com/" id="home-link"> <span class="image avatar48"><img loading="lazy" src="/assets/images/jmagunia_favicon.webp" height="55.33px" width="38.67px" alt="Avatar of Jay Magunia"></span> <h2 id="title">On Things</h2> <p>Jay's Homepage</p> </a> </div> <nav id="nav"> <ul> <li class="home"> <a href="https://jmagunia.com/" id="home-link-id"><span class="icon icon-home">Home</span></a> </li><li class="contact"> <a href="https://jmagunia.com/contact.html" id="contact-link-id"><span class="icon icon-mail">Contact</span></a> </li><li class="real-analysis"> <a href="https://jmagunia.com/real-analysis.html" id="real-analysis-link-id"><span class="icon icon-infinity">Real Analysis</span></a> </li><li class="statistics"> <a href="https://jmagunia.com/statistics.html" id="statistics-link-id"><span class="icon icon-chart-bar">Statistics</span></a> </li><li class="technology"> <a href="https://jmagunia.com/technology.html" id="technology-link-id"><span class="icon icon-desktop">Technology</span></a> </li><li class="arithmetic"> <a href="https://jmagunia.com/arithmetic.html" id="arithmetic-link-id"><span class="icon icon-chart-pie">Arithmetic</span></a> </li><li class="datasets"> <a href="https://jmagunia.com/datasets.html" id="datasets-link-id"><span class="icon icon-database">Datasets</span></a> </li><li class="spirituality"> <a href="https://jmagunia.com/spirituality.html" id="spirituality-link-id"><span class="icon icon-leaf">Spirituality</span></a> </li></ul> </nav> </div> <div class="bottom"><ul class="icons"> <li><a href="https://drupal.org/u/pmagunia" class="icon icon-drupal" title="Drupal"><span class="label">Drupal</span></a></li> <li><a href="" class="icon icon-twitter" title="Twitter"><span class="label">Twitter</span></a></li> <li><a href="https://www.linkedin.com/in/pmagunia" class="icon icon-linkedin-squared" title="LinkedIn"><span class="label">LinkedIn</span></a></li> <li><a href="https://github.com/pmagunia" class="icon icon-github-circled" title="Github"><span class="label">GitHub</span></a></li> <li><a href="https://www.upwork.com/freelancers/~015b1032d2938319a8?viewMode=1" class="icon upwork" title="Upwork">$<span class="label">Upwork</span></a></li> <li><a href="https://soundcloud.com/pmagunia" class="icon icon-soundcloud" title="SoundCloud"><span class="label">SoundCloud</span></a></li> <li><a href="https://stackoverflow.com/users/312471/pmagunia" class="icon icon-stackoverflow" title="StackOverflow"><span class="label">StackOverflow</span></a></li> </ul> </div> </div> <div id="main"> <article class="shade-two"> <div class="container"> <br> <header> <h1>Poverty and Education in Pennsylvania</h1> </header> <p>July 7, 2021</p><p>It would seem that poverty and education are connected, but what does the data say? To understand this relationship, I took <a target="_blank" href="/vis/pa.csv">my survey data</a> from <a target="_blank" href="https://www.openintro.org/data/index.php?data=county_complete">Open Intro</a> and focused on the following three variables for counties in Pennsylvania using only the <a target="_blank" href="https://d3js.org">D3 JavaScript library</a> for data visualization. Please note that data for some counties were missing for 2019.</p> <ol><li>Percent of the county population in poverty - <code>poverty_2019</code></li><li>Percent of the county with a bachelors degree - <code>bachelors_2019</code></li><li>Population of the county - <code>pop_2019</code></li></ol> <p>The data seems to corroborate the negative relationship as most people would likely imagine. Take a closer look using the plots created below. Navigate to a different plot by clicking one of the buttons below. The first plot, a scatterplot, is loaded already with accompanying informational text directly below the plot.</p> <link rel="stylesheet" href="/vis/style.css"/> <script src="https://d3js.org/d3.v6.js"></script> <p><button onclick="getScatterPlot();" id="button-scatterplot">Scatter Plot</button> <button onclick="getBoxPlot();" id="button-boxplot">Box Plot</button> <button onclick="getParallelPlot();" id="button-parallelplot">Parallel Plot</button></p> <div id="d3-plot"></div> <div id="d3-plot-info"></div> <p style="font-size:12px;">D3 Code: <code><a target="_blank" href="/vis/narrative-1.js">narrative-1.js</a></code>,<code><a target="_blank" href="/vis/narrative-2.js">narrative-2.js</a></code>,<code><a target="_blank" href="/vis/narrative-3.js">narrative-3.js</a></code></p> <script>
+function getScatterPlot() {
+    var s = document.createElement('script');
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = "/vis/narrative-1.js"; 
+    var fs = document.getElementById('d3-plot');
+    fs.innerHTML = '';
+    fs.appendChild(s);
+    document.getElementById('button-scatterplot').style.backgroundColor = '#467fa6';
+    document.getElementById('button-boxplot').style.backgroundColor = '#063f76';
+    document.getElementById('button-parallelplot').style.backgroundColor = '#063f76';
+    document.getElementById('d3-plot-info').style.marginTop = '10px';
+    document.getElementById('d3-plot-info').innerHTML = "<p>The scatterplot above plots the percentage of people with a bachelors degree in each county in Pennsylvania as the independent variable and the percentage of people in poverty as the dependendent variable. It is possible to see the negative downsloping relationship between these two variables. Hover your mouse above any bubble for drill-down tooltips for the county. You can find out more about scatter plots on <a target='_blank' href='https://en.wikipedia.org/wiki/Scatter_plot'>Wikipedia</a>.</p>";
+}
+
+function getBoxPlot() {
+    var s = document.createElement('script');
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = "/vis/narrative-2.js"; 
+    var fs = document.getElementById('d3-plot');
+    fs.innerHTML = '<div style="width:500px;"><div id="boxplot-1" style="width:200px;float:left"></div><div id="boxplot-2" style="width:200px;float:right;"></div></div>';
+    fs.appendChild(s);
+    document.getElementById('button-scatterplot').style.backgroundColor = '#063f76';
+    document.getElementById('button-boxplot').style.backgroundColor = '#467fa6';
+    document.getElementById('button-parallelplot').style.backgroundColor = '#063f76';
+    document.getElementById('d3-plot-info').style.marginTop = '-130px';
+    document.getElementById('d3-plot-info').innerHTML = "<p>The above boxplot shows the distribution of data with nonparametric statistics, namely Q1, Q2 (median), and Q3. The minimum and maximum values for <code>poverty_2019</code> and <code>bachelors</code> are displayed as the whiskers. You can find out more about boxplots on <a target='_blank' href='https://en.wikipedia.org/wiki/Box_plot'>Wikipedia</a>.</p>";
+}
+
+function getParallelPlot() {
+    var s = document.createElement('script');
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = "/vis/narrative-3.js"; 
+    var fs = document.getElementById('d3-plot');
+    fs.innerHTML = '';
+    fs.appendChild(s);
+    document.getElementById('button-scatterplot').style.backgroundColor = '#063f76';
+    document.getElementById('button-boxplot').style.backgroundColor = '#063f76';
+    document.getElementById('button-parallelplot').style.backgroundColor = '#467fa6';
+    document.getElementById('d3-plot-info').style.marginTop = '-130px';
+    document.getElementById('d3-plot-info').innerHTML = "<p>The above parallel plot displays three dimensional data in two dimensions. We can see most of the data lines extend from the lower end of the spectrum for education. Like, most of the data lines extend from the top of the spectrum for poverty. This indicates a negative relationship between education and poverty. In other words, as education levels increase, poverty tends to decrease. You can find out more about parallel coordinates on <a target='_blank' href='https://en.wikipedia.org/wiki/Parallel_coordinates'>Wikipedia</a>.</p>";
+}
+
+getScatterPlot();
+document.getElementById('button-scatterplot').style.backgroundColor = '#467fb6';
+document.getElementById('d3-plot-info').innerHTML = "<p>The scatterplot above plots the percentage of people with a bachelors degree in each county in Pennsylvania as the independent variable and the percentage of people in poverty as the dependendent variable. It is possible to see the negative downsloping relationship between these two variables. Hover your mouse above any bubble for drill-down tooltips for the county. You can find out more about scatter plots on <a target='_blank' href='https://en.wikipedia.org/wiki/Scatter_plot'>Wikipedia</a>.</p>";
+
+</script> </div> </article> </div> <div id="footer"> <ul class="copyright"> <li>&copy; Jay Magunia or affialiates <img src="/assets/images/flag.svg" height="16px" width="30px" alt="A photo of the United States Flag" class="my_home"></li> <li><a href="/sitemap.xml">Sitemap</a></li> <li><a href="https://jmagunia.com/2017/01/01/credits.html">Credits</a></li> <li><a href="/2017/01/01/privacy.html">Privacy</a></li> <li><a href="/2017/01/01/terms.html">Terms</a></li> <li><a target="_blank" href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fjmagunia.com%2F">Page Speed</a></li> </ul> </div> <script>MathJax = { tex: { inlineMath: [['$', '$']] }, loader: { load: ['ui/lazy'] }, svg: { fontCache: 'global'} };</script> <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script> <script async src="https://www.googletagmanager.com/gtag/js?id=G-LNRBXYSVG3"></script> <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LNRBXYSVG3');
+</script> </body> </html>

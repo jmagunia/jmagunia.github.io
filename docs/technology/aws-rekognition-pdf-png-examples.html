@@ -1,0 +1,103 @@
+<!DOCTYPE HTML> <html lang="en"><head> <meta charset="utf-8"> <link rel="stylesheet" href="/assets/css/main.css"> <link rel="stylesheet" href="/assets/css/fontello/css/jmagunia.min.css"> <link rel="stylesheet" href="/assets/css/rouge.min.css"> <meta name="viewport" content="width=device-width, initial-scale=1"> <meta name="robots" content="index, follow"> <link rel="canonical" href="https://jmagunia.com/technology/aws-rekognition-pdf-png-examples.html"> <title>Using AWS Rekognition To Turn Images and PDFs Into Human Readable Text | On Things | Jay's Homepage</title> <meta name="description" content="I wanted to turn a PDF into text I could copy and paste so I turned to AWS Rekognition. The console only accepted files that..."> <meta name="author" content="Jay Magunia"> <script async src="/assets/js/main.min.js"></script> </head> <body> <div id="headerToggle"><a href="#" class="toggle" onclick="menuToggle()" title="Open Menu"><span class="icon icon-menu"></span></a></div><div id="header"> <div class="top"><div id="logo"> <a href="https://jmagunia.com/" id="home-link"> <span class="image avatar48"><img loading="lazy" src="/assets/images/jmagunia_favicon.webp" height="55.33px" width="38.67px" alt="Avatar of Jay Magunia"></span> <h2 id="title">On Things</h2> <p>Jay's Homepage</p> </a> </div> <nav id="nav"> <ul> <li class="home"> <a href="https://jmagunia.com/" id="home-link-id"><span class="icon icon-home">Home</span></a> </li><li class="contact"> <a href="https://jmagunia.com/contact.html" id="contact-link-id"><span class="icon icon-mail">Contact</span></a> </li><li class="real-analysis"> <a href="https://jmagunia.com/real-analysis.html" id="real-analysis-link-id"><span class="icon icon-infinity">Real Analysis</span></a> </li><li class="statistics"> <a href="https://jmagunia.com/statistics.html" id="statistics-link-id"><span class="icon icon-chart-bar">Statistics</span></a> </li><li class="technology"> <a href="https://jmagunia.com/technology.html" id="technology-link-id"><span class="icon icon-desktop">Technology</span></a> </li><li class="arithmetic"> <a href="https://jmagunia.com/arithmetic.html" id="arithmetic-link-id"><span class="icon icon-chart-pie">Arithmetic</span></a> </li><li class="datasets"> <a href="https://jmagunia.com/datasets.html" id="datasets-link-id"><span class="icon icon-database">Datasets</span></a> </li><li class="spirituality"> <a href="https://jmagunia.com/spirituality.html" id="spirituality-link-id"><span class="icon icon-leaf">Spirituality</span></a> </li></ul> </nav> </div> <div class="bottom"><ul class="icons"> <li><a href="https://drupal.org/u/pmagunia" class="icon icon-drupal" title="Drupal"><span class="label">Drupal</span></a></li> <li><a href="" class="icon icon-twitter" title="Twitter"><span class="label">Twitter</span></a></li> <li><a href="https://www.linkedin.com/in/pmagunia" class="icon icon-linkedin-squared" title="LinkedIn"><span class="label">LinkedIn</span></a></li> <li><a href="https://github.com/pmagunia" class="icon icon-github-circled" title="Github"><span class="label">GitHub</span></a></li> <li><a href="https://www.upwork.com/freelancers/~015b1032d2938319a8?viewMode=1" class="icon upwork" title="Upwork">$<span class="label">Upwork</span></a></li> <li><a href="https://soundcloud.com/pmagunia" class="icon icon-soundcloud" title="SoundCloud"><span class="label">SoundCloud</span></a></li> <li><a href="https://stackoverflow.com/users/312471/pmagunia" class="icon icon-stackoverflow" title="StackOverflow"><span class="label">StackOverflow</span></a></li> </ul> </div> </div> <div id="main"> <article class="shade-two"> <div class="container"> <br> <header> <h1>Using AWS Rekognition To Turn Images and PDFs Into Human Readable Text</h1> </header> <p>November 19, 2020</p><p>I wanted to turn a PDF into text I could copy and paste so I turned to AWS Rekognition. The console only accepted files that were 5 MB. Mine was 13 MB so I had to use the console with asynchronous methods.</p> <p>I found an example on the AWS Blog that mentioned how to to do it. You can find the full blog post at <a href="https://aws.amazon.com/blogs/machine-learning/automatically-extract-text-and-structured-data-from-documents-with-amazon-textract">AWS Rekognition Blog post</a>. I am going to re-use two snippets from there and explain what they do. The first document I wanted to convert was a screenshot of a book page I took. The following is not text but an image of text that we are going to convert to text that can be copied and pasted with the mouse.</p> <p><img src="/assets/images/screenshot.png" alt="Bhagavad Gita text"/></p> <p>The contents of rekog.py:</p> <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="n">boto3</span>
+
+<span class="c1"># CHANGE THESE
+</span><span class="n">s3BucketName</span> <span class="o">=</span> <span class="sh">"</span><span class="s">picostat.com</span><span class="sh">"</span>
+<span class="n">documentName</span> <span class="o">=</span> <span class="sh">"</span><span class="s">bg.pdf</span><span class="sh">"</span>
+
+<span class="c1"># Amazon Textract client
+</span><span class="n">textract</span> <span class="o">=</span> <span class="n">boto3</span><span class="p">.</span><span class="nf">client</span><span class="p">(</span><span class="sh">'</span><span class="s">textract</span><span class="sh">'</span><span class="p">)</span>
+
+<span class="c1"># Call Amazon Textract
+</span><span class="n">response</span> <span class="o">=</span> <span class="n">textract</span><span class="p">.</span><span class="nf">detect_document_text</span><span class="p">(</span>
+    <span class="n">Document</span><span class="o">=</span><span class="p">{</span>
+        <span class="sh">'</span><span class="s">S3Object</span><span class="sh">'</span><span class="p">:</span> <span class="p">{</span>
+            <span class="sh">'</span><span class="s">Bucket</span><span class="sh">'</span><span class="p">:</span> <span class="n">s3BucketName</span><span class="p">,</span>
+            <span class="sh">'</span><span class="s">Name</span><span class="sh">'</span><span class="p">:</span> <span class="n">documentName</span>
+        <span class="p">}</span>
+    <span class="p">})</span>
+
+<span class="c1"># print(response)
+</span>
+<span class="c1"># Print detected text
+</span><span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">response</span><span class="p">[</span><span class="sh">"</span><span class="s">Blocks</span><span class="sh">"</span><span class="p">]:</span>
+    <span class="k">if</span> <span class="n">item</span><span class="p">[</span><span class="sh">"</span><span class="s">BlockType</span><span class="sh">"</span><span class="p">]</span> <span class="o">==</span> <span class="sh">"</span><span class="s">LINE</span><span class="sh">"</span><span class="p">:</span>
+        <span class="nf">print </span><span class="p">(</span><span class="n">item</span><span class="p">[</span><span class="sh">"</span><span class="s">Text</span><span class="sh">"</span><span class="p">])</span></code></pre></figure> <p>All you have to do to adapt it for your case is upload your image to an S3 bucket. In my case that was “picostat.com” which is listed in the code above. You then change the name of the image to whatever your filename is then run it with this command:</p> <figure class="highlight"><pre><code class="language-console" data-lang="console"><span class="gp">python3 rekog.py &gt;</span><span class="w"> </span>bg.txt</code></pre></figure> <p>The greater than tells Python to put the transcribed text in the file called <code class="language-plaintext highlighter-rouge">bg.txt</code>.</p> <p>If you get an error message that <code class="language-plaintext highlighter-rouge">boto</code> is not installed you can install it on a Mac with this command:</p> <figure class="highlight"><pre><code class="language-console" data-lang="console"><span class="go">pip3 install boto3 --user</span></code></pre></figure> <p>To convert a large PDF (larged than 5 MB) you will need an asynchronous script:</p> <p>Contents of rekog2.py</p> <figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="n">boto3</span>
+<span class="kn">import</span> <span class="n">time</span>
+
+<span class="k">def</span> <span class="nf">startJob</span><span class="p">(</span><span class="n">s3BucketName</span><span class="p">,</span> <span class="n">objectName</span><span class="p">):</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="n">client</span> <span class="o">=</span> <span class="n">boto3</span><span class="p">.</span><span class="nf">client</span><span class="p">(</span><span class="sh">'</span><span class="s">textract</span><span class="sh">'</span><span class="p">)</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="p">.</span><span class="nf">start_document_text_detection</span><span class="p">(</span>
+    <span class="n">DocumentLocation</span><span class="o">=</span><span class="p">{</span>
+        <span class="sh">'</span><span class="s">S3Object</span><span class="sh">'</span><span class="p">:</span> <span class="p">{</span>
+            <span class="sh">'</span><span class="s">Bucket</span><span class="sh">'</span><span class="p">:</span> <span class="n">s3BucketName</span><span class="p">,</span>
+            <span class="sh">'</span><span class="s">Name</span><span class="sh">'</span><span class="p">:</span> <span class="n">objectName</span>
+        <span class="p">}</span>
+    <span class="p">})</span>
+
+    <span class="k">return</span> <span class="n">response</span><span class="p">[</span><span class="sh">"</span><span class="s">JobId</span><span class="sh">"</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">isJobComplete</span><span class="p">(</span><span class="n">jobId</span><span class="p">):</span>
+    <span class="c1"># For production use cases, use SNS based notification
+</span>    <span class="c1"># Details at: https://docs.aws.amazon.com/textract/latest/dg/api-async.html
+</span>    <span class="n">time</span><span class="p">.</span><span class="nf">sleep</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+    <span class="n">client</span> <span class="o">=</span> <span class="n">boto3</span><span class="p">.</span><span class="nf">client</span><span class="p">(</span><span class="sh">'</span><span class="s">textract</span><span class="sh">'</span><span class="p">)</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="p">.</span><span class="nf">get_document_text_detection</span><span class="p">(</span><span class="n">JobId</span><span class="o">=</span><span class="n">jobId</span><span class="p">)</span>
+    <span class="n">status</span> <span class="o">=</span> <span class="n">response</span><span class="p">[</span><span class="sh">"</span><span class="s">JobStatus</span><span class="sh">"</span><span class="p">]</span>
+    <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Job status: {}</span><span class="sh">"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="n">status</span><span class="p">))</span>
+
+    <span class="nf">while</span><span class="p">(</span><span class="n">status</span> <span class="o">==</span> <span class="sh">"</span><span class="s">IN_PROGRESS</span><span class="sh">"</span><span class="p">):</span>
+        <span class="n">time</span><span class="p">.</span><span class="nf">sleep</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="p">.</span><span class="nf">get_document_text_detection</span><span class="p">(</span><span class="n">JobId</span><span class="o">=</span><span class="n">jobId</span><span class="p">)</span>
+        <span class="n">status</span> <span class="o">=</span> <span class="n">response</span><span class="p">[</span><span class="sh">"</span><span class="s">JobStatus</span><span class="sh">"</span><span class="p">]</span>
+        <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Job status: {}</span><span class="sh">"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="n">status</span><span class="p">))</span>
+
+    <span class="k">return</span> <span class="n">status</span>
+
+<span class="k">def</span> <span class="nf">getJobResults</span><span class="p">(</span><span class="n">jobId</span><span class="p">):</span>
+
+    <span class="n">pages</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="n">client</span> <span class="o">=</span> <span class="n">boto3</span><span class="p">.</span><span class="nf">client</span><span class="p">(</span><span class="sh">'</span><span class="s">textract</span><span class="sh">'</span><span class="p">)</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="p">.</span><span class="nf">get_document_text_detection</span><span class="p">(</span><span class="n">JobId</span><span class="o">=</span><span class="n">jobId</span><span class="p">)</span>
+
+    <span class="n">pages</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+    <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Resultset page recieved: {}</span><span class="sh">"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="nf">len</span><span class="p">(</span><span class="n">pages</span><span class="p">)))</span>
+    <span class="n">nextToken</span> <span class="o">=</span> <span class="bp">None</span>
+    <span class="nf">if</span><span class="p">(</span><span class="sh">'</span><span class="s">NextToken</span><span class="sh">'</span> <span class="ow">in</span> <span class="n">response</span><span class="p">):</span>
+        <span class="n">nextToken</span> <span class="o">=</span> <span class="n">response</span><span class="p">[</span><span class="sh">'</span><span class="s">NextToken</span><span class="sh">'</span><span class="p">]</span>
+
+    <span class="nf">while</span><span class="p">(</span><span class="n">nextToken</span><span class="p">):</span>
+
+        <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="p">.</span><span class="nf">get_document_text_detection</span><span class="p">(</span><span class="n">JobId</span><span class="o">=</span><span class="n">jobId</span><span class="p">,</span> <span class="n">NextToken</span><span class="o">=</span><span class="n">nextToken</span><span class="p">)</span>
+
+        <span class="n">pages</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+        <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Resultset page recieved: {}</span><span class="sh">"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="nf">len</span><span class="p">(</span><span class="n">pages</span><span class="p">)))</span>
+        <span class="n">nextToken</span> <span class="o">=</span> <span class="bp">None</span>
+        <span class="nf">if</span><span class="p">(</span><span class="sh">'</span><span class="s">NextToken</span><span class="sh">'</span> <span class="ow">in</span> <span class="n">response</span><span class="p">):</span>
+            <span class="n">nextToken</span> <span class="o">=</span> <span class="n">response</span><span class="p">[</span><span class="sh">'</span><span class="s">NextToken</span><span class="sh">'</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="n">pages</span>
+
+<span class="c1"># CHANGE THESE
+</span><span class="n">s3BucketName</span> <span class="o">=</span> <span class="sh">"</span><span class="s">picostat.com</span><span class="sh">"</span>
+<span class="n">documentName</span> <span class="o">=</span> <span class="sh">"</span><span class="s">bg.pdf</span><span class="sh">"</span>
+
+<span class="n">jobId</span> <span class="o">=</span> <span class="nf">startJob</span><span class="p">(</span><span class="n">s3BucketName</span><span class="p">,</span> <span class="n">documentName</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Started job with id: {}</span><span class="sh">"</span><span class="p">.</span><span class="nf">format</span><span class="p">(</span><span class="n">jobId</span><span class="p">))</span>
+<span class="nf">if</span><span class="p">(</span><span class="nf">isJobComplete</span><span class="p">(</span><span class="n">jobId</span><span class="p">)):</span>
+    <span class="n">response</span> <span class="o">=</span> <span class="nf">getJobResults</span><span class="p">(</span><span class="n">jobId</span><span class="p">)</span>
+
+<span class="c1">#print(response)
+</span>
+<span class="c1"># Print detected text
+</span><span class="k">for</span> <span class="n">resultPage</span> <span class="ow">in</span> <span class="n">response</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">resultPage</span><span class="p">[</span><span class="sh">"</span><span class="s">Blocks</span><span class="sh">"</span><span class="p">]:</span>
+        <span class="k">if</span> <span class="n">item</span><span class="p">[</span><span class="sh">"</span><span class="s">BlockType</span><span class="sh">"</span><span class="p">]</span> <span class="o">==</span> <span class="sh">"</span><span class="s">LINE</span><span class="sh">"</span><span class="p">:</span>
+            <span class="nf">print </span><span class="p">(</span><span class="n">item</span><span class="p">[</span><span class="sh">"</span><span class="s">Text</span><span class="sh">"</span><span class="p">])</span></code></pre></figure> <p>Once again, all you need to do is change the document name and the bucket name and then run this command.</p> <figure class="highlight"><pre><code class="language-console" data-lang="console"><span class="gp">python3 rekog2.py &gt;</span><span class="w"> </span>bg.txt</code></pre></figure> <p>If you’re not sure how to upload a document to S3 you can do it with this command if you have AWS CLI installed:</p> <figure class="highlight"><pre><code class="language-console" data-lang="console"><span class="go">aws s3 cp bg.pdf s3://picostat.com</span></code></pre></figure> <p>Or you can go to the AWS Console to use the graphical user interface uploaded in the S3 section.</p> </div> </article> </div> <div id="footer"> <ul class="copyright"> <li>&copy; Jay Magunia or affialiates <img src="/assets/images/flag.svg" height="16px" width="30px" alt="A photo of the United States Flag" class="my_home"></li> <li><a href="/sitemap.xml">Sitemap</a></li> <li><a href="https://jmagunia.com/2017/01/01/credits.html">Credits</a></li> <li><a href="/2017/01/01/privacy.html">Privacy</a></li> <li><a href="/2017/01/01/terms.html">Terms</a></li> <li><a target="_blank" href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fjmagunia.com%2F">Page Speed</a></li> </ul> </div> <script async src="https://www.googletagmanager.com/gtag/js?id=G-LNRBXYSVG3"></script> <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LNRBXYSVG3');
+</script> </body> </html>
