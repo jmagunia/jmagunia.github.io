@@ -1,0 +1,71 @@
+---
+title: R Dataset / Package robustbase / salinity
+layout: page
+permalink: /dataset/:slug
+---
+<div id="dataset-info">
+<p>On this R-data statistics page, you will find information about the <span class="mono">salinity</span> data set which pertains to Salinity Data. The <span class="mono">salinity</span> data set is found in the <span class="mono">robustbase</span> R package. You can load the <span class="mono">salinity</span> data set in R by issuing the following command at the console <span class="mono">data("salinity")</span>. This will load the data into a variable called <span class="mono">salinity</span>. If R says the <span class="mono">salinity</span> data set is not found, you can try installing the package by issuing this command <span class="mono">install.packages("robustbase")</span> and then attempt to reload the data with the <span class="mono">library()</span> command. If you need to download R, you can go to the <a href="https://www.r-project.org">R project website</a>. You can download a CSV (comma separated values) version of the <span class="mono"><a href="../assets/data/csv/dataset-13260.csv">salinity R data set</a></span>. The size of this file is about 506 bytes.</p><h2>Salinity Data</h2>
+<h3>Description</h3>
+<p>This is a data set consisting of measurements of water salinity (i.e., its salt concentration) and river discharge taken in North Carolina's Pamlico Sound, recording some bi-weekly averages in March, April, and May from 1972 to 1977. This dataset was listed by Ruppert and Carroll (1980). In Carrol and Ruppert (1985) the physical background of the data is described. They indicated that observations 5 and 16 correspond to periods of very heavy discharge and showed that the discrepant observation 5 was masked by observations 3 and 16, i.e., only after deletion of these observations it was possible to identify the influential observation 5.</p>
+<p>This data set is a prime example of the <em>masking effect</em>.</p>
+<h3>Usage</h3>
+<pre>data(salinity)</pre>
+<h3>Format</h3>
+<p>A data frame with 28 observations on the following 4 variables (in parentheses are the names used in the 1980 reference).</p>
+<dl>
+<dt><code>X1</code>:</dt>
+<dd>
+<p>Lagged Salinity (‘SALLAG’)</p>
+</dd>
+<dt><code>X2</code>:</dt>
+<dd>
+<p>Trend (‘TREND’)</p>
+</dd>
+<dt><code>X3</code>:</dt>
+<dd>
+<p>Discharge (‘H2OFLOW’)</p>
+</dd>
+<dt><code>Y</code>:</dt>
+<dd>
+<p>Salinity (‘SALINITY’)</p>
+</dd>
+</dl>
+<h3>Note</h3>
+<p>The <span class="pkg">boot</span> package contains another version of this salinity data set, also attributed to Ruppert and Carroll (1980), but with two clear transcription errors, see the examples.</p>
+<h3>Source</h3>
+<p>P. J. Rousseeuw and A. M. Leroy (1987) <em>Robust Regression and Outlier Detection</em>; Wiley, p.82, table 5.</p>
+<p>Ruppert, D. and Carroll, R.J. (1980) Trimmed least squares estimation in the linear model. <em>JASA</em> <b>75</b>, 828–838; table 3, p.835.</p>
+<p>Carroll, R.J. and Ruppert, D. (1985) Transformations in regression: A robust analysis. <em>Technometrics</em> <b>27</b>, 1–12</p>
+<h3>Examples</h3>
+<pre>
+data(salinity)
+summary(lm.sali&lt;-lm(Y ~ . , data = salinity))
+summary(rlm.sali &lt;- MASS::rlm(Y ~ . , data = salinity))
+summary(lts.sali &lt;-ltsReg(Y ~ . , data = salinity))salinity.x &lt;- data.matrix(salinity[, 1:3])
+c_sal &lt;- covMcd(salinity.x)
+plot(c_sal, "tolEllipsePlot")## Connection with boot package's version :
+if(requireNamespace("boot")) { ## 'always'
+ print( head(boot.sal &lt;- boot::salinity) )
+ print( head(robb.sal &lt;- salinity [, c(4, 1:3)]) ) # difference: has one digit more
+ ## Otherwise the same ?
+ dimnames(robb.sal) &lt;- dimnames(boot.sal)
+ ## apart from the 4th column, they are "identical":
+ stopifnot( all.equal(boot.sal[, -4], robb.sal[, -4], tol = 1e-15) ) ## But the discharge ('X3', 'dis' or 'H2OFLOW')__differs__ in two places:
+ plot(cbind(robustbase = robb.sal[,4], boot = boot.sal[,4]))
+ abline(0,1, lwd=3, col=adjustcolor("red", 1/4))
+ D.sal &lt;- robb.sal[,4] - boot.sal[,4]
+ stem(robb.sal[,4] - boot.sal[,4])
+ which(abs(D.sal) &gt; 0.01) ## 2 8
+ ## *two* typos (=&gt; difference ~= 1) in the version of 'boot': obs. 2 &amp; 8 !!!
+ cbind(robb = robb.sal[,4], boot = boot.sal[,4], D.sal)
+}# boot
+</pre>
+<p>Dataset imported from <a href="https://www.r-project.org">https://www.r-project.org</a>.</p></div>
+<p id="dataset-attachments">Attachments: <code><a target="_blank" href="/assets/data/csv/dataset-13260.csv">csv</a></code>, <code><a target="_blank" href="/assets/data/json/dataset-13260.json">json</a></code></p>
+<div id="dataset-iframe">
+{% highlight html %}
+<iframe src="https://jmagunia.com/iframe/r-dataset-package-robustbase-salinity.html" width="100%" height="100%" style="border:0px"></iframe>
+{% endhighlight %}
+</div>
+<div id="grid"></div>
+<script>let json_file = 'dataset-13260.json';</script>

@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	{%- include head.html -%}
+	<body>
+		<div id="headerToggle"><a href="#" class="toggle" onclick="menuToggle()" title="Open Menu"><span class="icon icon-menu"></span></a></div>
+		{{- content -}}
+		{%- include footer.html -%}
+		{% if page.url == "/contact.html" %}
+			<script async src="https://www.google.com/recaptcha/api.js"></script>
+			<script async src="{{- 'assets/js/contact.min.js' | relative_url -}}"></script>
+		{% endif %}
+		{% if page.url contains '/math/' or page.url contains '/statistics/' or page.url contains 'real-analysis.html' or page.url contains 'statistics.html' or page.url contains 'arithmetic.html' %}
+			<script>MathJax = { tex: { inlineMath: [['$', '$']] }, loader: { load: ['ui/lazy'] }, svg: { fontCache: 'global'} };</script>
+			<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+		{% endif %}
+		{% if page.url contains '/dataset/' %}
+			<script src="https://unpkg.com/gridjs/dist/gridjs.umd.js"></script>
+			<script async src="{{- 'assets/js/dataset.min.js' | relative_url -}}"></script>
+		{% endif %}
+		{% include google_analytics.html %}
+	</body>
+</html>

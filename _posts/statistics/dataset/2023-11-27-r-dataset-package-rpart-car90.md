@@ -1,0 +1,175 @@
+---
+title: R Dataset / Package rpart / car90
+layout: page
+permalink: /dataset/:slug
+---
+<div id="dataset-info">
+<p>On this R-data statistics page, you will find information about the <span class="mono">car90</span> data set which pertains to Automobile Data from 'Consumer Reports' 1990. The <span class="mono">car90</span> data set is found in the <span class="mono">rpart</span> R package. You can load the <span class="mono">car90</span> data set in R by issuing the following command at the console <span class="mono">data("car90")</span>. This will load the data into a variable called <span class="mono">car90</span>. If R says the <span class="mono">car90</span> data set is not found, you can try installing the package by issuing this command <span class="mono">install.packages("rpart")</span> and then attempt to reload the data with the <span class="mono">library()</span> command. If you need to download R, you can go to the <a href="https://www.r-project.org">R project website</a>. You can download a CSV (comma separated values) version of the <span class="mono"><a href="../assets/data/csv/dataset-20753.csv">car90 R data set</a></span>. The size of this file is about 20,391 bytes.</p><h2>Automobile Data from 'Consumer Reports' 1990</h2>
+<h3>Description</h3>
+<p>Data on 111 cars, taken from pages 235–255, 281–285 and 287–288 of the April 1990 <em>Consumer Reports</em> Magazine.</p>
+<h3>Usage</h3>
+<pre>data(car90)</pre>
+<h3>Format</h3>
+<p>The data frame contains the following columns</p>
+<dl>
+<dt>Country</dt>
+<dd>
+<p>a factor giving the country in which the car was manufactured</p>
+</dd>
+<dt>Disp</dt>
+<dd>
+<p>engine displacement in cubic inches</p>
+</dd>
+<dt>Disp2</dt>
+<dd>
+<p>engine displacement in liters</p>
+</dd>
+<dt>Eng.Rev</dt>
+<dd>
+<p>engine revolutions per mile, or engine speed at 60 mph</p>
+</dd>
+<dt>Front.Hd</dt>
+<dd>
+<p>distance between the car's head-liner and the head of a 5 ft. 9 in. front seat passenger, in inches, as measured by CU</p>
+</dd>
+<dt>Frt.Leg.Room</dt>
+<dd>
+<p>maximum front leg room, in inches, as measured by CU</p>
+</dd>
+<dt>Frt.Shld</dt>
+<dd>
+<p>front shoulder room, in inches, as measured by CU</p>
+</dd>
+<dt>Gear.Ratio</dt>
+<dd>
+<p>the overall gear ratio, high gear, for manual transmission</p>
+</dd>
+<dt>Gear2</dt>
+<dd>
+<p>the overall gear ratio, high gear, for automatic transmission</p>
+</dd>
+<dt>HP</dt>
+<dd>
+<p>net horsepower</p>
+</dd>
+<dt>HP.revs</dt>
+<dd>
+<p>the red line—the maximum safe engine speed in rpm</p>
+</dd>
+<dt>Height</dt>
+<dd>
+<p>height of car, in inches, as supplied by manufacturer</p>
+</dd>
+<dt>Length</dt>
+<dd>
+<p>overall length, in inches, as supplied by manufacturer</p>
+</dd>
+<dt>Luggage</dt>
+<dd>
+<p>luggage space</p>
+</dd>
+<dt>Mileage</dt>
+<dd>
+<p>a numeric vector of gas mileage in miles/gallon as tested by CU; contains NAs.</p>
+</dd>
+<dt>Model2</dt>
+<dd>
+<p>alternate name, if the car was sold under two labels</p>
+</dd>
+<dt>Price</dt>
+<dd>
+<p>list price with standard equipment, in dollars</p>
+</dd>
+<dt>Rear.Hd</dt>
+<dd>
+<p>distance between the car's head-liner and the head of a 5 ft 9 in. rear seat passenger, in inches, as measured by CU</p>
+</dd>
+<dt>Rear.Seating</dt>
+<dd>
+<p>rear fore-and-aft seating room, in inches, as measured by CU</p>
+</dd>
+<dt>RearShld</dt>
+<dd>
+<p>rear shoulder room, in inches, as measured by CU</p>
+</dd>
+<dt>Reliability</dt>
+<dd>
+<p>an ordered factor with levels <span class="samp">Much worse</span> &lt; <span class="samp">worse</span> &lt; <span class="samp">average</span> &lt; <span class="samp">better</span> &lt; <span class="samp">Much better</span>: contains <code>NA</code>s.</p>
+</dd>
+<dt>Rim</dt>
+<dd>
+<p>factor giving the rim size</p>
+</dd>
+<dt>Sratio.m</dt>
+<dd>
+<p>Number of turns of the steering wheel required for a turn of 30 foot radius, manual steering</p>
+</dd>
+<dt>Sratio.p</dt>
+<dd>
+<p>Number of turns of the steering wheel required for a turn of 30 foot radius, power steering</p>
+</dd>
+<dt>Steering</dt>
+<dd>
+<p>steering type offered: manual, power, or both</p>
+</dd>
+<dt>Tank</dt>
+<dd>
+<p>fuel refill capacity in gallons</p>
+</dd>
+<dt>Tires</dt>
+<dd>
+<p>factor giving tire size</p>
+</dd>
+<dt>Trans1</dt>
+<dd>
+<p>manual transmission, a factor with levels <span class="samp"></span>, <span class="samp">man.4</span>, <span class="samp">man.5</span> and <span class="samp">man.6</span></p>
+</dd>
+<dt>Trans2</dt>
+<dd>
+<p>automatic transmission, a factor with levels <span class="samp"></span>, <span class="samp">auto.3</span>, <span class="samp">auto.4</span>, and <span class="samp">auto.CVT</span>. No car is missing both the manual and automatic transmission variables, but several had both as options</p>
+</dd>
+<dt>Turning</dt>
+<dd>
+<p>the radius of the turning circle in feet</p>
+</dd>
+<dt>Type</dt>
+<dd>
+<p>a factor giving the general type of car. The levels are: <span class="samp">Small</span>, <span class="samp">Sporty</span>, <span class="samp">Compact</span>, <span class="samp">Medium</span>, <span class="samp">Large</span>, <span class="samp">Van</span></p>
+</dd>
+<dt>Weight</dt>
+<dd>
+<p>an order statistic giving the relative weights of the cars; 1 is the lightest and 111 is the heaviest</p>
+</dd>
+<dt>Wheel.base</dt>
+<dd>
+<p>length of wheelbase, in inches, as supplied by manufacturer</p>
+</dd>
+<dt>Width</dt>
+<dd>
+<p>width of car, in inches, as supplied by manufacturer</p>
+</dd>
+</dl>
+<h3>Source</h3>
+<p>This is derived (with permission) from the data set <code>car.all</code> in S-PLUS, but with some further clean up of variable names and definitions.</p>
+<h3>See Also</h3>
+<p><code>car.test.frame</code>, <code>cu.summary</code> for extracts from other versions of the dataset.</p>
+<h3>Examples</h3>
+<pre>
+data(car90)
+plot(car90$Price/1000, car90$Weight,
+ xlab = "Price (thousands)", ylab = "Weight (lbs)")
+mlowess &lt;- function(x, y, ...) {
+keep &lt;- !(is.na(x) | is.na(y))
+lowess(x[keep], y[keep], ...)
+}
+with(car90, lines(mlowess(Price/1000, Weight, f = 0.5)))
+</pre>
+<p>Dataset imported from <a href="https://www.r-project.org">https://www.r-project.org</a>.</p></div>
+<p id="dataset-attachments">Attachments: <code><a target="_blank" href="/assets/data/csv/dataset-20753.csv">csv</a></code>, <code><a target="_blank" href="/assets/data/json/dataset-20753.json">json</a></code></p>
+<div id="dataset-iframe">
+{% highlight html %}
+<iframe src="https://jmagunia.com/iframe/r-dataset-package-rpart-car90.html" width="100%" height="100%" style="border:0px"></iframe>
+{% endhighlight %}
+</div>
+<div id="grid"></div>
+<script>let json_file = 'dataset-20753.json';</script>

@@ -1,0 +1,70 @@
+---
+title: R Dataset / Package robustbase / milk
+layout: page
+permalink: /dataset/:slug
+---
+<div id="dataset-info">
+<p>On this R-data statistics page, you will find information about the <span class="mono">milk</span> data set which pertains to Daudin's Milk Composition Data. The <span class="mono">milk</span> data set is found in the <span class="mono">robustbase</span> R package. You can load the <span class="mono">milk</span> data set in R by issuing the following command at the console <span class="mono">data("milk")</span>. This will load the data into a variable called <span class="mono">milk</span>. If R says the <span class="mono">milk</span> data set is not found, you can try installing the package by issuing this command <span class="mono">install.packages("robustbase")</span> and then attempt to reload the data with the <span class="mono">library()</span> command. If you need to download R, you can go to the <a href="https://www.r-project.org">R project website</a>. You can download a CSV (comma separated values) version of the <span class="mono"><a href="../assets/data/csv/dataset-96899.csv">milk R data set</a></span>. The size of this file is about 3,647 bytes.</p><h2>Daudin's Milk Composition Data</h2>
+<h3>Description</h3>
+<p>Daudin et al.(1988) give 8 readings on the composition of 86 containers of milk. They speak about 85 observations, but this can be explained with the fact that observations 63 and 64 are identical (as noted by Rocke (1996)).</p>
+<p>The data set was used for analysing the stability of principal component analysis by the bootstrap method. In the same context, but using high breakdown point robust PCA, these data were analysed by Todorov et al. (1994). Atkinson (1994) used these data for ilustration of the forward search algorithm for identifying of multiple outliers.</p>
+<h3>Usage</h3>
+<pre>data(milk)</pre>
+<h3>Format</h3>
+<p>A data frame with 86 observations on the following 8 variables, all but the first measure units in <em>grams / liter</em>.</p>
+<dl>
+<dt><code>X1</code></dt>
+<dd>
+<p>density</p>
+</dd>
+<dt><code>X2</code></dt>
+<dd>
+<p>fat content</p>
+</dd>
+<dt><code>X3</code></dt>
+<dd>
+<p>protein content</p>
+</dd>
+<dt><code>X4</code></dt>
+<dd>
+<p>casein content</p>
+</dd>
+<dt><code>X5</code></dt>
+<dd>
+<p>cheese dry substance measured in the factory</p>
+</dd>
+<dt><code>X6</code></dt>
+<dd>
+<p>cheese dry substance measured in the laboratory</p>
+</dd>
+<dt><code>X7</code></dt>
+<dd>
+<p>milk dry substance</p>
+</dd>
+<dt><code>X8</code></dt>
+<dd>
+<p>cheese product</p>
+</dd>
+</dl>
+<h3>Source</h3>
+<p>Daudin, J.J. Duby, C. and Trecourt, P. (1988) Stability of Principal Component Analysis Studied by the Bootstrap Method; <em>Statistics</em> <b>19</b>, 241–258.</p>
+<h3>References</h3>
+<p>Todorov, V., Neyko, N., Neytchev, P. (1994) Stability of High Breakdown Point Robust PCA, in <em>Short Communications, COMPSTAT'94</em>; Physica Verlag, Heidelberg.</p>
+<p>Atkinson, A.C. (1994) Fast Very Robust Methods for the Detection of Multiple Outliers. <em>J. Amer. Statist. Assoc.</em> <b>89</b> 1329–1339.</p>
+<p>Rocke, D. M. and Woodruff, D. L. (1996) Identification of Outliers in Multivariate Data; <em>J. Amer. Statist. Assoc.</em> <b>91</b> (435), 1047–1061.</p>
+<h3>Examples</h3>
+<pre>
+data(milk)
+(c.milk &lt;- covMcd(milk))
+summarizeRobWeights(c.milk $ mcd.wt)# 19..20 outliers
+umilk &lt;- unique(milk) # dropping obs.64 (== obs.63)
+summary(cumilk &lt;- covMcd(umilk, nsamp = "deterministic")) # 20 outliers</pre>
+<p>Dataset imported from <a href="https://www.r-project.org">https://www.r-project.org</a>.</p></div>
+<p id="dataset-attachments">Attachments: <code><a target="_blank" href="/assets/data/csv/dataset-96899.csv">csv</a></code>, <code><a target="_blank" href="/assets/data/json/dataset-96899.json">json</a></code></p>
+<div id="dataset-iframe">
+{% highlight html %}
+<iframe src="https://jmagunia.com/iframe/r-dataset-package-robustbase-milk.html" width="100%" height="100%" style="border:0px"></iframe>
+{% endhighlight %}
+</div>
+<div id="grid"></div>
+<script>let json_file = 'dataset-96899.json';</script>

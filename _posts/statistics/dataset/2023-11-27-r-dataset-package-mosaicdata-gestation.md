@@ -1,0 +1,104 @@
+---
+title: R Dataset / Package mosaicData / Gestation
+layout: page
+permalink: /dataset/:slug
+---
+<div id="dataset-info">
+<p>On this R-data statistics page, you will find information about the <span class="mono">Gestation</span> data set which pertains to Data from the Child Health and Development Studies. The <span class="mono">Gestation</span> data set is found in the <span class="mono">mosaicData</span> R package. You can load the <span class="mono">Gestation</span> data set in R by issuing the following command at the console <span class="mono">data("Gestation")</span>. This will load the data into a variable called <span class="mono">Gestation</span>. If R says the <span class="mono">Gestation</span> data set is not found, you can try installing the package by issuing this command <span class="mono">install.packages("mosaicData")</span> and then attempt to reload the data with the <span class="mono">library()</span> command. If you need to download R, you can go to the <a href="https://www.r-project.org">R project website</a>. You can download a CSV (comma separated values) version of the <span class="mono"><a href="../assets/data/csv/dataset-76698.csv">Gestation R data set</a></span>. The size of this file is about 81,131 bytes.</p><h2>Data from the Child Health and Development Studies</h2>
+<h3>Description</h3>
+<p>Birth weight, date, and gestational period collected as part of the Child Health and Development Studies in 1961 and 1962. Information about the baby's parents — age, education, height, weight, and whether the mother smoked is also recorded.</p>
+<h3>Usage</h3>
+<pre>
+data(Gestation)
+</pre>
+<h3>Format</h3>
+<p>A data frame with 1236 observations on the following variables.</p>
+<ul>
+<li>
+<p><code>id</code> identification number</p>
+</li>
+<li>
+<p><code>pluralty</code> 5 = single fetus</p>
+</li>
+<li>
+<p><code>outcome</code> 1 = live birth that survived at least 28 days</p>
+</li>
+<li>
+<p><code>date</code> birth date where 1096=January 1, 1961</p>
+</li>
+<li>
+<p><code>gestation</code> length of gestation (in days)</p>
+</li>
+<li>
+<p><code>sex</code> infant's sex (1=male, 2=female)</p>
+</li>
+<li>
+<p><code>wt</code> birth weight (in ounces)</p>
+</li>
+<li>
+<p><code>parity</code> total number of previous pregnancies (including fetal deaths and still births)</p>
+</li>
+<li>
+<p><code>race</code> mother's race: 0-5=white 6=mex 7=black 8=asian 9=mixed</p>
+</li>
+<li>
+<p><code>age</code> mother's age in years at termination of pregnancy</p>
+</li>
+<li>
+<p><code>ed</code> mother's education: 0= less than 8th grade, 1 = 8th -12th grade - did not graduate, 2= HS graduate–no other schooling, 3= HS+trade, 4=HS+some college, 5=College graduate, 6=Trade school, 7=HS unclear</p>
+</li>
+<li>
+<p><code>ht</code> mother's height in inches to the last completed inch</p>
+</li>
+<li>
+<p><code>wt.1</code> mother's prepregnancy weight (in pounds)</p>
+</li>
+<li>
+<p><code>drace</code> father's race (a factor with levels equivalent to mother's race)</p>
+</li>
+<li>
+<p><code>dage</code> father's age (in years)</p>
+</li>
+<li>
+<p><code>ded</code> father'ed education (same coding as mother's education)</p>
+</li>
+<li>
+<p><code>dht</code> father's height in inches to the last completed inch</p>
+</li>
+<li>
+<p><code>dwt</code> father's weight (in pounds)</p>
+</li>
+<li>
+<p><code>marital</code> marital status: 1=married, 2=legally separated, 3=divorced, 4=widowed, 5=never married</p>
+</li>
+<li>
+<p><code>inc</code> family yearly income in $2500 increments: 0=under 2500, 1=2500-4999, ..., 8=12,500-14,999, 9=15000+</p>
+</li>
+<li>
+<p><code>smoke</code> does mother smoke? 0=never, 1=smokes now, 2=until current pregnancy, 3=once did, not now</p>
+</li>
+<li>
+<p><code>time</code> time since quitting smoking: 0=never smoked, 1=still smokes, 2=during current preg, 3=within 1 yr, 4=1 to 2 years ago, 5= 2 to 3 yr ago, 6= 3 to 4 yrs ago, 7=5 to 9yrs ago, 8=10+yrs ago, 9=quit and don't know</p>
+</li>
+<li>
+<p><code>number</code> number of cigs smoked per day for past and current smokers 0=never, 1=1-4, 2=5-9, 3=10-14, 4=15-19, 5=20-29, 6=30-39, 7=40-60, 8=60+, 9=smoke but don't know</p>
+</li>
+</ul>
+<h3>Details</h3>
+<p>The data were presented by Nolan and Speed to address the question of whether there is a link between maternal smoking and the baby's health.</p>
+<h3>Source</h3>
+<p>The book by Nolan and Speed describes the data in more detail and provides an Internet site for accessing them: <a href="http://www.stat.berkeley.edu/users/statlabs/">http://www.stat.berkeley.edu/users/statlabs/</a></p>
+<h3>References</h3>
+<p>D Nolan and T Speed. <em>Stat Labs: Mathematical Statistics Through Applications</em> (2000), Springer-Verlag.</p>
+<h3>Examples</h3>
+<pre>
+data(Gestation)</pre>
+<p>Dataset imported from <a href="https://www.r-project.org">https://www.r-project.org</a>.</p></div>
+<p id="dataset-attachments">Attachments: <code><a target="_blank" href="/assets/data/csv/dataset-76698.csv">csv</a></code>, <code><a target="_blank" href="/assets/data/json/dataset-76698.json">json</a></code></p>
+<div id="dataset-iframe">
+{% highlight html %}
+<iframe src="https://jmagunia.com/iframe/r-dataset-package-mosaicdata-gestation.html" width="100%" height="100%" style="border:0px"></iframe>
+{% endhighlight %}
+</div>
+<div id="grid"></div>
+<script>let json_file = 'dataset-76698.json';</script>

@@ -1,0 +1,23 @@
+<nav id="nav">
+	<ul>
+		{%- assign _pages = site.html_pages | where_exp: "page", "page.hide != true" -%}
+		{%- assign _pages = _pages | sort: 'order' -%}
+		{%- for _page in _pages -%}
+			{%- assign _title = _page.title | default: _page.layout -%}
+			{%- assign _slug = _title | slugify -%}
+			{%- assign _icon = _page.icon | default: 'icon-link' -%}
+			{% if _slug == 'redirect' %}
+				{% continue %}
+			{%- endif -%}
+        		{%- if _page.url == page.url -%}
+          			<li class="{{- _slug -}}">
+					<a href="#" id="{{- _slug -}}" class="active"><span class="icon {{ _icon }}">{{- _title -}}</span></a>
+				</li>
+        		{%- elsif _page.url -%}
+				<li class="{{- _slug -}}">
+					<a href="{{- _page.url | absolute_url -}}" id="{{- _slug -}}-link-id"><span class="icon {{ _icon }}">{{- _title -}}</span></a>
+				</li>
+			{%- endif -%}
+		{%- endfor -%}
+	</ul>
+</nav>

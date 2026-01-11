@@ -1,0 +1,26 @@
+{%- assign _title = include.title | default '' -%}
+{%- assign _slug = include.title | strip_html | slugify -%}
+
+{%- if include.photo and include.photo-alt -%}
+	{%- capture _photo -%}
+		<img src="{{- include.photo | relative_url -}}" alt="{{- include.photo-alt -}}" class="back">
+	{%- endcapture -%}
+	{%- assign _class = 'shade-one cover dark' -%}
+{%- else -%}
+	{%- assign _photo = '' -%}
+	{%- capture _class -%}shade-{%- cycle 'two', 'three', 'four', 'three' -%}{%- endcapture -%}
+{%- endif -%}
+
+{%- capture _heading -%}
+	<header>
+		<h2>{{- _title -}}</h2>
+	</header>
+{%- endcapture -%}
+
+<section id="{{- _slug -}}" class="{{- _class -}}">
+	<div class="container">
+		{{- _photo -}}
+		{{- _heading -}}
+		{{- include.content -}}
+	</div>
+</section>

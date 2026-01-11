@@ -1,0 +1,66 @@
+---
+title: R Dataset / Package datasets / CO2
+layout: page
+permalink: /dataset/:slug
+---
+<div id="dataset-info">
+<p>On this R-data statistics page, you will find information about the <span class="mono">CO2</span> data set which pertains to Carbon Dioxide Uptake in Grass Plants. The <span class="mono">CO2</span> data set is found in the <span class="mono">datasets</span> R package. You can load the <span class="mono">CO2</span> data set in R by issuing the following command at the console <span class="mono">data("CO2")</span>. This will load the data into a variable called <span class="mono">CO2</span>. If R says the <span class="mono">CO2</span> data set is not found, you can try installing the package by issuing this command <span class="mono">install.packages("datasets")</span> and then attempt to reload the data with the <span class="mono">library()</span> command. If you need to download R, you can go to the <a href="https://www.r-project.org">R project website</a>. You can download a CSV (comma separated values) version of the <span class="mono"><a href="../assets/data/csv/dataset-13357.csv">CO2 R data set</a></span>. The size of this file is about 2,580 bytes.</p><h2>Carbon Dioxide Uptake in Grass Plants</h2>
+<h3>Description</h3>
+<p>The <code>CO2</code> data frame has 84 rows and 5 columns of data from an experiment on the cold tolerance of the grass species <em>Echinochloa crus-galli</em>.</p>
+<h3>Usage</h3>
+<pre>CO2</pre>
+<h3>Format</h3>
+<p>An object of class <code>c("nfnGroupedData", "nfGroupedData", "groupedData", "data.frame")</code> containing the following columns:</p>
+<dl>
+<dt>Plant</dt>
+<dd>
+<p>an ordered factor with levels <code>Qn1</code> &lt; <code>Qn2</code> &lt; <code>Qn3</code> &lt; ... &lt; <code>Mc1</code> giving a unique identifier for each plant.</p>
+</dd>
+<dt>Type</dt>
+<dd>
+<p>a factor with levels <code>Quebec</code> <code>Mississippi</code> giving the origin of the plant</p>
+</dd>
+<dt>Treatment</dt>
+<dd>
+<p>a factor with levels <code>nonchilled</code> <code>chilled</code></p>
+</dd>
+<dt>conc</dt>
+<dd>
+<p>a numeric vector of ambient carbon dioxide concentrations (mL/L).</p>
+</dd>
+<dt>uptake</dt>
+<dd>
+<p>a numeric vector of carbon dioxide uptake rates (<i>umol/m^2</i> sec).</p>
+</dd>
+</dl>
+<h3>Details</h3>
+<p>The <i>CO2</i> uptake of six plants from Quebec and six plants from Mississippi was measured at several levels of ambient <i>CO2</i> concentration. Half the plants of each type were chilled overnight before the experiment was conducted.</p>
+<p>This dataset was originally part of package <code>nlme</code>, and that has methods (including for <code>[</code>, <code>as.data.frame</code>, <code>plot</code> and <code>print</code>) for its grouped-data classes.</p>
+<h3>Source</h3>
+<p>Potvin, C., Lechowicz, M. J. and Tardif, S. (1990) “The statistical analysis of ecophysiological response curves obtained from experiments involving repeated measures”, <em>Ecology</em>, <b>71</b>, 1389–1400.</p>
+<p>Pinheiro, J. C. and Bates, D. M. (2000) <em>Mixed-effects Models in S and S-PLUS</em>, Springer.</p>
+<h3>Examples</h3>
+<pre>
+require(stats); require(graphics)coplot(uptake ~ conc | Plant, data = CO2, show.given = FALSE, type = "b")
+## fit the data for the first plant
+fm1 &lt;- nls(uptake ~ SSasymp(conc, Asym, lrc, c0),
+ data = CO2, subset = Plant == "Qn1")
+summary(fm1)
+## fit each plant separately
+fmlist &lt;- list()
+for (pp in levels(CO2$Plant)) {
+fmlist[[pp]] &lt;- nls(uptake ~ SSasymp(conc, Asym, lrc, c0),
+data = CO2, subset = Plant == pp)
+}
+## check the coefficients by plant
+print(sapply(fmlist, coef), digits = 3)
+</pre>
+<p>Dataset imported from <a href="https://www.r-project.org">https://www.r-project.org</a>.</p></div>
+<p id="dataset-attachments">Attachments: <code><a target="_blank" href="/assets/data/csv/dataset-13357.csv">csv</a></code>, <code><a target="_blank" href="/assets/data/json/dataset-13357.json">json</a></code></p>
+<div id="dataset-iframe">
+{% highlight html %}
+<iframe src="https://jmagunia.com/iframe/r-dataset-package-datasets-co2.html" width="100%" height="100%" style="border:0px"></iframe>
+{% endhighlight %}
+</div>
+<div id="grid"></div>
+<script>let json_file = 'dataset-13357.json';</script>
