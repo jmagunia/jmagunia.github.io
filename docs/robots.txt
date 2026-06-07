@@ -3,4 +3,4 @@ Disallow: /2017/01/01/terms.html
 Disallow: /2017/01/01/privacy.html
 Disallow: /404.html
 Disallow: /iframe/
-Disallow: /assets/data/csv/
+Disallow: /assets/data
