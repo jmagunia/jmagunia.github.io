@@ -2,6 +2,7 @@
 title: R Dataset / Package MASS / menarche
 layout: page
 permalink: /dataset/:slug.html
+redirect_from: /dataset/r-dataset-package-mass-menarche
 ---
 <div id="dataset-info">
 <p>On this R-data statistics page, you will find information about the <span class="mono">menarche</span> data set which pertains to Age of Menarche in Warsaw. The <span class="mono">menarche</span> data set is found in the <span class="mono">MASS</span> R package. You can load the <span class="mono">menarche</span> data set in R by issuing the following command at the console <span class="mono">data("menarche")</span>. This will load the data into a variable called <span class="mono">menarche</span>. If R says the <span class="mono">menarche</span> data set is not found, you can try installing the package by issuing this command <span class="mono">install.packages("MASS")</span> and then attempt to reload the data with the <span class="mono">library()</span> command. If you need to download R, you can go to the <a href="https://www.r-project.org">R project website</a>. You can download a CSV (comma separated values) version of the <span class="mono"><a href="../assets/data/csv/dataset-17104.csv">menarche R data set</a></span>. The size of this file is about 342 bytes.</p><h2>Age of Menarche in Warsaw</h2>

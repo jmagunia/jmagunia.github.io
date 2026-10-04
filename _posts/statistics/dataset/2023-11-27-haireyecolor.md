@@ -2,6 +2,7 @@
 title: HairEyeColor
 layout: page
 permalink: /dataset/:slug.html
+redirect_from: /dataset/haireyecolor
 ---
 <div id="dataset-info">
 <h2>Hair and Eye Color of Statistics Students</h2>

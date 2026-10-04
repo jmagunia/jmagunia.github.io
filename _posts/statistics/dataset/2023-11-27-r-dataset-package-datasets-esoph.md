@@ -2,6 +2,7 @@
 title: R Dataset / Package datasets / esoph
 layout: page
 permalink: /dataset/:slug.html
+redirect_from: /dataset/r-dataset-package-datasets-esoph
 ---
 <div id="dataset-info">
 <p>On this R-data statistics page, you will find information about the <span class="mono">esoph</span> data set which pertains to Smoking, Alcohol and (O)esophageal Cancer. The <span class="mono">esoph</span> data set is found in the <span class="mono">datasets</span> R package. You can load the <span class="mono">esoph</span> data set in R by issuing the following command at the console <span class="mono">data("esoph")</span>. This will load the data into a variable called <span class="mono">esoph</span>. If R says the <span class="mono">esoph</span> data set is not found, you can try installing the package by issuing this command <span class="mono">install.packages("datasets")</span> and then attempt to reload the data with the <span class="mono">library()</span> command. If you need to download R, you can go to the <a href="https://www.r-project.org">R project website</a>. You can download a CSV (comma separated values) version of the <span class="mono"><a href="../assets/data/csv/dataset-87569.csv">esoph R data set</a></span>. The size of this file is about 2,645 bytes.</p><h2>Smoking, Alcohol and (O)esophageal Cancer</h2>

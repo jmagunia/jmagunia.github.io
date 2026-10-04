@@ -2,6 +2,7 @@
 title: OpenIntro Statistics Dataset - photo_classify
 layout: page
 permalink: /dataset/:slug.html
+redirect_from: /dataset/openintro-statistics-dataset-photoclassify
 ---
 <div id="dataset-info">
 <p>This statistics dataset was taken from <a target="_blank" href="https://www.openintro.org">OpenIntro</a>. You can find free introductory books on statistics for AP and college students there in both PDF and soft-cover format with open licenses.</p>

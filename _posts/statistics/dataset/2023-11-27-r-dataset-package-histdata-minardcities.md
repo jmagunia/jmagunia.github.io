@@ -2,6 +2,7 @@
 title: R Dataset / Package HistData / Minard.cities
 layout: page
 permalink: /dataset/:slug.html
+redirect_from: /dataset/r-dataset-package-histdata-minardcities
 ---
 <div id="dataset-info">
 <p>On this R-data statistics page, you will find information about the <span class="mono">Minard.cities</span> data set which pertains to Data from Minard's famous graphic map of Napoleon's march on Moscow. The <span class="mono">Minard.cities</span> data set is found in the <span class="mono">HistData</span> R package. You can load the <span class="mono">Minard.cities</span> data set in R by issuing the following command at the console <span class="mono">data("Minard.cities")</span>. This will load the data into a variable called <span class="mono">Minard.cities</span>. If R says the <span class="mono">Minard.cities</span> data set is not found, you can try installing the package by issuing this command <span class="mono">install.packages("HistData")</span> and then attempt to reload the data with the <span class="mono">library()</span> command. If you need to download R, you can go to the <a href="https://www.r-project.org">R project website</a>. You can download a CSV (comma separated values) version of the <span class="mono"><a href="../assets/data/csv/dataset-90976.csv">Minard.cities R data set</a></span>. The size of this file is about 417 bytes.</p><h2>Data from Minard's famous graphic map of Napoleon's march on Moscow</h2>

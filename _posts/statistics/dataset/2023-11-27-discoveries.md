@@ -2,6 +2,7 @@
 title: discoveries
 layout: page
 permalink: /dataset/:slug.html
+redirect_from: /dataset/discoveries
 ---
 <div id="dataset-info">
 <h2>Yearly Numbers of Important Discoveries</h2>

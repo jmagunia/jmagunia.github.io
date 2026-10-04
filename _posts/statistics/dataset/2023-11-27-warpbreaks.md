@@ -2,6 +2,7 @@
 title: warpbreaks
 layout: page
 permalink: /dataset/:slug.html
+redirect_from: /dataset/warpbreaks
 ---
 <div id="dataset-info">
 <h2>The Number of Breaks in Yarn during Weaving</h2>

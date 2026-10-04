@@ -2,6 +2,7 @@
 title: Unskilled Dataset
 layout: page
 permalink: /dataset/:slug.html
+redirect_from: /dataset/unskilled-dataset
 ---
 <div id="dataset-info">
 This is my unskilled dataset of random numbers. Rejoice.</div>

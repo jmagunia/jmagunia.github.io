@@ -2,6 +2,7 @@
 title: R Dataset / Package DAAG / tinting
 layout: page
 permalink: /dataset/:slug.html
+redirect_from: /dataset/r-dataset-package-daag-tinting
 ---
 <div id="dataset-info">
 <p>On this R-data statistics page, you will find information about the <span class="mono">tinting</span> data set which pertains to Car Window Tinting Experiment Data. The <span class="mono">tinting</span> data set is found in the <span class="mono">DAAG</span> R package. You can load the <span class="mono">tinting</span> data set in R by issuing the following command at the console <span class="mono">data("tinting")</span>. This will load the data into a variable called <span class="mono">tinting</span>. If R says the <span class="mono">tinting</span> data set is not found, you can try installing the package by issuing this command <span class="mono">install.packages("DAAG")</span> and then attempt to reload the data with the <span class="mono">library()</span> command. If you need to download R, you can go to the <a href="https://www.r-project.org">R project website</a>. You can download a CSV (comma separated values) version of the <span class="mono"><a href="../assets/data/csv/dataset-85017.csv">tinting R data set</a></span>. The size of this file is about 9,010 bytes.</p><h2>Car Window Tinting Experiment Data</h2>

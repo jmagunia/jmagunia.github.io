@@ -2,6 +2,7 @@
 title: stackloss
 layout: page
 permalink: /dataset/:slug.html
+redirect_from: /dataset/stackloss
 ---
 <div id="dataset-info">
 <h2>Brownlee's Stack Loss Plant Data</h2>

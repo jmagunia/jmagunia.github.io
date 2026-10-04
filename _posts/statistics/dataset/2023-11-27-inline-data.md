@@ -2,6 +2,7 @@
 title: Inline Data
 layout: page
 permalink: /dataset/:slug.html
+redirect_from: /dataset/inline-data
 ---
 <div id="dataset-info">
 </div>

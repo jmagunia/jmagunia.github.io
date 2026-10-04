@@ -2,6 +2,7 @@
 title: Airline Safety
 layout: page
 permalink: /dataset/:slug.html
+redirect_from: /dataset/airline-safety
 ---
 <div id="dataset-info">
 <h2>Airline safety data</h2>

@@ -2,6 +2,7 @@
 title: USJudgeRatings
 layout: page
 permalink: /dataset/:slug.html
+redirect_from: /dataset/usjudgeratings
 ---
 <div id="dataset-info">
 <h2>Lawyers' Ratings of State Judges in the US Superior Court</h2>

@@ -2,6 +2,7 @@
 title: Example Data
 layout: page
 permalink: /dataset/:slug.html
+redirect_from: /dataset/example-data
 ---
 <div id="dataset-info">
 <h3>X ~ Uniform(0,100)</h3>

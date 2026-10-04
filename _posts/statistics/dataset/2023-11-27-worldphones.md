@@ -2,6 +2,7 @@
 title: WorldPhones
 layout: page
 permalink: /dataset/:slug.html
+redirect_from: /dataset/worldphones
 ---
 <div id="dataset-info">
 <h2>The World's Telephones</h2>

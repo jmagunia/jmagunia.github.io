@@ -2,6 +2,7 @@
 title: Formaldehyde
 layout: page
 permalink: /dataset/:slug.html
+redirect_from: /dataset/formaldehyde
 ---
 <div id="dataset-info">
 <h2>Determination of Formaldehyde</h2>

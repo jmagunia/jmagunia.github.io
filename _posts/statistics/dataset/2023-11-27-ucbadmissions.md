@@ -2,6 +2,7 @@
 title: UCBAdmissions
 layout: page
 permalink: /dataset/:slug.html
+redirect_from: /dataset/ucbadmissions
 ---
 <div id="dataset-info">
 <h2>Student Admissions at UC Berkeley</h2>

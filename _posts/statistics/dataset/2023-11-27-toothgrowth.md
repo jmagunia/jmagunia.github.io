@@ -2,6 +2,7 @@
 title: ToothGrowth
 layout: page
 permalink: /dataset/:slug.html
+redirect_from: /dataset/toothgrowth
 ---
 <div id="dataset-info">
 <h2>The Effect of Vitamin C on Tooth Growth in Guinea Pigs</h2>

@@ -2,6 +2,7 @@
 title: R Dataset / Package Zelig / mexico
 layout: page
 permalink: /dataset/:slug.html
+redirect_from: /dataset/r-dataset-package-zelig-mexico
 ---
 <div id="dataset-info">
 <p>On this R-data statistics page, you will find information about the <span class="mono">mexico</span> data set which pertains to Voting Data from the 1988 Mexican Presidental Election. The <span class="mono">mexico</span> data set is found in the <span class="mono">Zelig</span> R package. You can load the <span class="mono">mexico</span> data set in R by issuing the following command at the console <span class="mono">data("mexico")</span>. This will load the data into a variable called <span class="mono">mexico</span>. If R says the <span class="mono">mexico</span> data set is not found, you can try installing the package by issuing this command <span class="mono">install.packages("Zelig")</span> and then attempt to reload the data with the <span class="mono">library()</span> command. If you need to download R, you can go to the <a href="https://www.r-project.org">R project website</a>. You can download a CSV (comma separated values) version of the <span class="mono"><a href="../assets/data/csv/dataset-13788.csv">mexico R data set</a></span>. The size of this file is about 91,498 bytes.</p><h2>Voting Data from the 1988 Mexican Presidental Election</h2>
