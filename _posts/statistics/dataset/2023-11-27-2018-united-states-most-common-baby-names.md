@@ -1,8 +1,8 @@
 ---
 title: 2018 United States Most Common Baby Names
 layout: page
-permalink: /dataset/:slug.html
-redirect_from: /dataset/2018-united-states-most-common-baby-names
+permalink: /dataset/:slug/
+redirect_from: /dataset/2018-united-states-most-common-baby-names.html
 ---
 <div id="dataset-info">
 <h2>2018 United States Most Common Baby Names</h2>

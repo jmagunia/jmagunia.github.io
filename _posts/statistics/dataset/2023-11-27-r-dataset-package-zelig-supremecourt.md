@@ -1,8 +1,8 @@
 ---
 title: R Dataset / Package Zelig / SupremeCourt
 layout: page
-permalink: /dataset/:slug.html
-redirect_from: /dataset/r-dataset-package-zelig-supremecourt
+permalink: /dataset/:slug/
+redirect_from: /dataset/r-dataset-package-zelig-supremecourt.html
 ---
 <div id="dataset-info">
 <p>On this R-data statistics page, you will find information about the <span class="mono">SupremeCourt</span> data set which pertains to U.S. Supreme Court Vote Matrix. The <span class="mono">SupremeCourt</span> data set is found in the <span class="mono">Zelig</span> R package. You can load the <span class="mono">SupremeCourt</span> data set in R by issuing the following command at the console <span class="mono">data("SupremeCourt")</span>. This will load the data into a variable called <span class="mono">SupremeCourt</span>. If R says the <span class="mono">SupremeCourt</span> data set is not found, you can try installing the package by issuing this command <span class="mono">install.packages("Zelig")</span> and then attempt to reload the data with the <span class="mono">library()</span> command. If you need to download R, you can go to the <a href="https://www.r-project.org">R project website</a>. You can download a CSV (comma separated values) version of the <span class="mono"><a href="../assets/data/csv/dataset-60563.csv">SupremeCourt R data set</a></span>. The size of this file is about 865 bytes.</p><h2>U.S. Supreme Court Vote Matrix</h2>

@@ -1,8 +1,8 @@
 ---
 title: R Dataset / Package datasets / occupationalStatus
 layout: page
-permalink: /dataset/:slug.html
-redirect_from: /dataset/r-dataset-package-datasets-occupationalstatus
+permalink: /dataset/:slug/
+redirect_from: /dataset/r-dataset-package-datasets-occupationalstatus.html
 ---
 <div id="dataset-info">
 <p>On this R-data statistics page, you will find information about the <span class="mono">occupationalStatus</span> data set which pertains to Occupational Status of Fathers and their Sons. The <span class="mono">occupationalStatus</span> data set is found in the <span class="mono">datasets</span> R package. You can load the <span class="mono">occupationalStatus</span> data set in R by issuing the following command at the console <span class="mono">data("occupationalStatus")</span>. This will load the data into a variable called <span class="mono">occupationalStatus</span>. If R says the <span class="mono">occupationalStatus</span> data set is not found, you can try installing the package by issuing this command <span class="mono">install.packages("datasets")</span> and then attempt to reload the data with the <span class="mono">library()</span> command. If you need to download R, you can go to the <a href="https://www.r-project.org">R project website</a>. You can download a CSV (comma separated values) version of the <span class="mono"><a href="../assets/data/csv/dataset-38144.csv">occupationalStatus R data set</a></span>. The size of this file is about 223 bytes.</p><h2>Occupational Status of Fathers and their Sons</h2>

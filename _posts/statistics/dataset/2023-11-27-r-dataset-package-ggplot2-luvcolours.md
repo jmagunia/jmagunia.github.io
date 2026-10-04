@@ -1,8 +1,8 @@
 ---
 title: R Dataset / Package ggplot2 / luv_colours
 layout: page
-permalink: /dataset/:slug.html
-redirect_from: /dataset/r-dataset-package-ggplot2-luvcolours
+permalink: /dataset/:slug/
+redirect_from: /dataset/r-dataset-package-ggplot2-luvcolours.html
 ---
 <div id="dataset-info">
 <p>On this R-data statistics page, you will find information about the <span class="mono">luv_colours</span> data set which pertains to <code>colors()</code> in Luv space. The <span class="mono">luv_colours</span> data set is found in the <span class="mono">ggplot2</span> R package. You can load the <span class="mono">luv_colours</span> data set in R by issuing the following command at the console <span class="mono">data("luv_colours")</span>. This will load the data into a variable called <span class="mono">luv_colours</span>. If R says the <span class="mono">luv_colours</span> data set is not found, you can try installing the package by issuing this command <span class="mono">install.packages("ggplot2")</span> and then attempt to reload the data with the <span class="mono">library()</span> command. If you need to download R, you can go to the <a href="https://www.r-project.org">R project website</a>. You can download a CSV (comma separated values) version of the <span class="mono"><a href="../assets/data/csv/dataset-95773.csv">luv_colours R data set</a></span>. The size of this file is about 39,004 bytes.</p><h2><code>colors()</code> in Luv space</h2>

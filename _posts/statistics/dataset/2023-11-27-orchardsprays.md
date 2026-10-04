@@ -1,8 +1,8 @@
 ---
 title: OrchardSprays
 layout: page
-permalink: /dataset/:slug.html
-redirect_from: /dataset/orchardsprays
+permalink: /dataset/:slug/
+redirect_from: /dataset/orchardsprays.html
 ---
 <div id="dataset-info">
 <h2>Potency of Orchard Sprays</h2>

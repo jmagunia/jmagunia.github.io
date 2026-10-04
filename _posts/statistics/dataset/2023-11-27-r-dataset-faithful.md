@@ -1,8 +1,8 @@
 ---
 title: faithful
 layout: page
-permalink: /dataset/:slug.html
-redirect_from: /dataset/r-dataset-faithful
+permalink: /dataset/:slug/
+redirect_from: /dataset/r-dataset-faithful.html
 ---
 <div id="dataset-info">
 <h2>Old Faithful Geyser Data</h2>

@@ -1,8 +1,8 @@
 ---
 title: Example Data
 layout: page
-permalink: /dataset/:slug.html
-redirect_from: /dataset/example-data
+permalink: /dataset/:slug/
+redirect_from: /dataset/example-data.html
 ---
 <div id="dataset-info">
 <h3>X ~ Uniform(0,100)</h3>

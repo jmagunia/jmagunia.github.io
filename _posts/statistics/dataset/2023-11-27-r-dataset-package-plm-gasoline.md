@@ -1,8 +1,8 @@
 ---
 title: R Dataset / Package plm / Gasoline
 layout: page
-permalink: /dataset/:slug.html
-redirect_from: /dataset/r-dataset-package-plm-gasoline
+permalink: /dataset/:slug/
+redirect_from: /dataset/r-dataset-package-plm-gasoline.html
 ---
 <div id="dataset-info">
 <p>On this R-data statistics page, you will find information about the <span class="mono">Gasoline</span> data set which pertains to Gasoline Consumption. The <span class="mono">Gasoline</span> data set is found in the <span class="mono">plm</span> R package. You can load the <span class="mono">Gasoline</span> data set in R by issuing the following command at the console <span class="mono">data("Gasoline")</span>. This will load the data into a variable called <span class="mono">Gasoline</span>. If R says the <span class="mono">Gasoline</span> data set is not found, you can try installing the package by issuing this command <span class="mono">install.packages("plm")</span> and then attempt to reload the data with the <span class="mono">library()</span> command. If you need to download R, you can go to the <a href="https://www.r-project.org">R project website</a>. You can download a CSV (comma separated values) version of the <span class="mono"><a href="../assets/data/csv/dataset-39879.csv">Gasoline R data set</a></span>. The size of this file is about 22,412 bytes.</p><h2>Gasoline Consumption</h2>

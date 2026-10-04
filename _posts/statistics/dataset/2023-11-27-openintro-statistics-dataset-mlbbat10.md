@@ -1,8 +1,8 @@
 ---
 title: OpenIntro Statistics Dataset - mlbbat10
 layout: page
-permalink: /dataset/:slug.html
-redirect_from: /dataset/openintro-statistics-dataset-mlbbat10
+permalink: /dataset/:slug/
+redirect_from: /dataset/openintro-statistics-dataset-mlbbat10.html
 ---
 <div id="dataset-info">
 <p>This statistics dataset was taken from <a target="_blank" href="https://www.openintro.org">OpenIntro</a>. You can find free introductory books on statistics for AP and college students there in both PDF and soft-cover format with open licenses.</p>

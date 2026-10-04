@@ -1,8 +1,8 @@
 ---
 title: R Dataset / Package DAAG / softbacks
 layout: page
-permalink: /dataset/:slug.html
-redirect_from: /dataset/r-dataset-package-daag-softbacks
+permalink: /dataset/:slug/
+redirect_from: /dataset/r-dataset-package-daag-softbacks.html
 ---
 <div id="dataset-info">
 <p>On this R-data statistics page, you will find information about the <span class="mono">softbacks</span> data set which pertains to Measurements on a Selection of Paperback Books. The <span class="mono">softbacks</span> data set is found in the <span class="mono">DAAG</span> R package. You can load the <span class="mono">softbacks</span> data set in R by issuing the following command at the console <span class="mono">data("softbacks")</span>. This will load the data into a variable called <span class="mono">softbacks</span>. If R says the <span class="mono">softbacks</span> data set is not found, you can try installing the package by issuing this command <span class="mono">install.packages("DAAG")</span> and then attempt to reload the data with the <span class="mono">library()</span> command. If you need to download R, you can go to the <a href="https://www.r-project.org">R project website</a>. You can download a CSV (comma separated values) version of the <span class="mono"><a href="../assets/data/csv/dataset-50870.csv">softbacks R data set</a></span>. The size of this file is about 85 bytes.</p><h2>Measurements on a Selection of Paperback Books</h2>

@@ -1,8 +1,8 @@
 ---
 title: R Dataset / Package MASS / drivers
 layout: page
-permalink: /dataset/:slug.html
-redirect_from: /dataset/r-dataset-package-mass-drivers
+permalink: /dataset/:slug/
+redirect_from: /dataset/r-dataset-package-mass-drivers.html
 ---
 <div id="dataset-info">
 <p>On this R-data statistics page, you will find information about the <span class="mono">drivers</span> data set which pertains to Deaths of Car Drivers in Great Britain 1969-84. The <span class="mono">drivers</span> data set is found in the <span class="mono">MASS</span> R package. You can load the <span class="mono">drivers</span> data set in R by issuing the following command at the console <span class="mono">data("drivers")</span>. This will load the data into a variable called <span class="mono">drivers</span>. If R says the <span class="mono">drivers</span> data set is not found, you can try installing the package by issuing this command <span class="mono">install.packages("MASS")</span> and then attempt to reload the data with the <span class="mono">library()</span> command. If you need to download R, you can go to the <a href="https://www.r-project.org">R project website</a>. You can download a CSV (comma separated values) version of the <span class="mono"><a href="../assets/data/csv/dataset-33978.csv">drivers R data set</a></span>. The size of this file is about 3,601 bytes.</p><h2>Deaths of Car Drivers in Great Britain 1969-84</h2>

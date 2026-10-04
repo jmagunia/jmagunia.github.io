@@ -1,8 +1,8 @@
 ---
 title: Gender and Politics
 layout: page
-permalink: /dataset/:slug.html
-redirect_from: /dataset/gender-and-politics
+permalink: /dataset/:slug/
+redirect_from: /dataset/gender-and-politics.html
 ---
 <div id="dataset-info">
 <h2>Gender and Politics</h2>
