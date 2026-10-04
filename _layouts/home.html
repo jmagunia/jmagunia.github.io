@@ -22,6 +22,9 @@ layout: default
                 {%- if _post.url contains '/arithmetic/' -%}
                         {% continue %}
                 {%- endif -%}
+		{%- if _post.url contains '/technology/' -%}
+                        {% continue %}
+                {%- endif -%}
                 {%- if _post.url contains '/statistics/' -%}
                         {% continue %}
                 {%- endif -%}
