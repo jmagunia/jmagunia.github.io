@@ -9,7 +9,7 @@
 			<script async src="https://www.google.com/recaptcha/api.js"></script>
 			<script async src="{{- 'assets/js/contact.min.js' | relative_url -}}"></script>
 		{% endif %}
-		{% if page.url contains '/math/' or page.url contains '/statistics/' or page.url contains 'real-analysis.html' or page.url contains 'statistics.html' or page.url contains 'arithmetic.html' %}
+		{% if page.url contains '/math' or page.url contains '/statistics' or page.url contains 'real-analysis' or page.url contains 'statistics' or page.url contains 'arithmetic' %}
 			<script>MathJax = { tex: { inlineMath: [['$', '$']] }, loader: { load: ['ui/lazy'] }, svg: { fontCache: 'global'} };</script>
 			<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 		{% endif %}
