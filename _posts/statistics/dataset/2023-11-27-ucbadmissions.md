@@ -1,7 +1,7 @@
 ---
 title: UCBAdmissions
 layout: page
-permalink: /dataset/:slug
+permalink: /dataset/:slug.html
 ---
 <div id="dataset-info">
 <h2>Student Admissions at UC Berkeley</h2>

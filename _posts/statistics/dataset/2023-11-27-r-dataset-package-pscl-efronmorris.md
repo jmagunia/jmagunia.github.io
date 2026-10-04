@@ -1,7 +1,7 @@
 ---
 title: R Dataset / Package pscl / EfronMorris
 layout: page
-permalink: /dataset/:slug
+permalink: /dataset/:slug.html
 ---
 <div id="dataset-info">
 <p>On this R-data statistics page, you will find information about the <span class="mono">EfronMorris</span> data set which pertains to Batting Averages for 18 major league baseball players, 1970. The <span class="mono">EfronMorris</span> data set is found in the <span class="mono">pscl</span> R package. You can load the <span class="mono">EfronMorris</span> data set in R by issuing the following command at the console <span class="mono">data("EfronMorris")</span>. This will load the data into a variable called <span class="mono">EfronMorris</span>. If R says the <span class="mono">EfronMorris</span> data set is not found, you can try installing the package by issuing this command <span class="mono">install.packages("pscl")</span> and then attempt to reload the data with the <span class="mono">library()</span> command. If you need to download R, you can go to the <a href="https://www.r-project.org">R project website</a>. You can download a CSV (comma separated values) version of the <span class="mono"><a href="../assets/data/csv/dataset-44101.csv">EfronMorris R data set</a></span>. The size of this file is about 846 bytes.</p><h2>Batting Averages for 18 major league baseball players, 1970</h2>

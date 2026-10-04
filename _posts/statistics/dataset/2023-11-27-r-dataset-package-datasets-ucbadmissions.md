@@ -1,7 +1,7 @@
 ---
 title: R Dataset / Package datasets / UCBAdmissions
 layout: page
-permalink: /dataset/:slug
+permalink: /dataset/:slug.html
 ---
 <div id="dataset-info">
 <p>On this R-data statistics page, you will find information about the <span class="mono">UCBAdmissions</span> data set which pertains to Student Admissions at UC Berkeley. The <span class="mono">UCBAdmissions</span> data set is found in the <span class="mono">datasets</span> R package. You can load the <span class="mono">UCBAdmissions</span> data set in R by issuing the following command at the console <span class="mono">data("UCBAdmissions")</span>. This will load the data into a variable called <span class="mono">UCBAdmissions</span>. If R says the <span class="mono">UCBAdmissions</span> data set is not found, you can try installing the package by issuing this command <span class="mono">install.packages("datasets")</span> and then attempt to reload the data with the <span class="mono">library()</span> command. If you need to download R, you can go to the <a href="https://www.r-project.org">R project website</a>. You can download a CSV (comma separated values) version of the <span class="mono"><a href="../assets/data/csv/dataset-37099.csv">UCBAdmissions R data set</a></span>. The size of this file is about 670 bytes.</p><h2>Student Admissions at UC Berkeley</h2>

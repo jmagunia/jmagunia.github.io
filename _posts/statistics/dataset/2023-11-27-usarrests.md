@@ -1,7 +1,7 @@
 ---
 title: USArrests
 layout: page
-permalink: /dataset/:slug
+permalink: /dataset/:slug.html
 ---
 <div id="dataset-info">
 <h2>Violent Crime Rates by US State</h2>

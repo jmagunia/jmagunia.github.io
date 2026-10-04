@@ -1,7 +1,7 @@
 ---
 title: White House Staff Salaries 2011 - 2016
 layout: page
-permalink: /dataset/:slug
+permalink: /dataset/:slug.html
 ---
 <div id="dataset-info">
 <h2>White House Staff Salaries 2011-16</h2>

@@ -1,7 +1,7 @@
 ---
 title: ChickWeight
 layout: page
-permalink: /dataset/:slug
+permalink: /dataset/:slug.html
 ---
 <div id="dataset-info">
 <h2>Weight versus age of chicks on different diets</h2>

@@ -1,7 +1,7 @@
 ---
 title: R Dataset / Package psych / income
 layout: page
-permalink: /dataset/:slug
+permalink: /dataset/:slug.html
 ---
 <div id="dataset-info">
 <p>On this R-data statistics page, you will find information about the <span class="mono">income</span> data set which pertains to US family income from US census 2008. The <span class="mono">income</span> data set is found in the <span class="mono">psych</span> R package. You can load the <span class="mono">income</span> data set in R by issuing the following command at the console <span class="mono">data("income")</span>. This will load the data into a variable called <span class="mono">income</span>. If R says the <span class="mono">income</span> data set is not found, you can try installing the package by issuing this command <span class="mono">install.packages("psych")</span> and then attempt to reload the data with the <span class="mono">library()</span> command. If you need to download R, you can go to the <a href="https://www.r-project.org">R project website</a>. You can download a CSV (comma separated values) version of the <span class="mono"><a href="../assets/data/csv/dataset-57763.csv">income R data set</a></span>. The size of this file is about 1,610 bytes.</p><h2>US family income from US census 2008</h2>

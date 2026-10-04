@@ -1,7 +1,7 @@
 ---
 title: R Dataset / Package pscl / presidentialElections
 layout: page
-permalink: /dataset/:slug
+permalink: /dataset/:slug.html
 ---
 <div id="dataset-info">
 <p>On this R-data statistics page, you will find information about the <span class="mono">presidentialElections</span> data set which pertains to elections for U.S. President, 1932-2012, by state. The <span class="mono">presidentialElections</span> data set is found in the <span class="mono">pscl</span> R package. You can load the <span class="mono">presidentialElections</span> data set in R by issuing the following command at the console <span class="mono">data("presidentialElections")</span>. This will load the data into a variable called <span class="mono">presidentialElections</span>. If R says the <span class="mono">presidentialElections</span> data set is not found, you can try installing the package by issuing this command <span class="mono">install.packages("pscl")</span> and then attempt to reload the data with the <span class="mono">library()</span> command. If you need to download R, you can go to the <a href="https://www.r-project.org">R project website</a>. You can download a CSV (comma separated values) version of the <span class="mono"><a href="../assets/data/csv/dataset-31287.csv">presidentialElections R data set</a></span>. The size of this file is about 29,408 bytes.</p><h2>elections for U.S. President, 1932-2012, by state</h2>

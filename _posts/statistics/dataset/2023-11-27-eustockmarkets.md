@@ -1,7 +1,7 @@
 ---
 title: EuStockMarkets
 layout: page
-permalink: /dataset/:slug
+permalink: /dataset/:slug.html
 ---
 <div id="dataset-info">
 <h2>Daily Closing Prices of Major European Stock Indices, 1991–1998</h2>

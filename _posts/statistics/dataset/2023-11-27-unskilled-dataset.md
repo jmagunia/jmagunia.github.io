@@ -1,7 +1,7 @@
 ---
 title: Unskilled Dataset
 layout: page
-permalink: /dataset/:slug
+permalink: /dataset/:slug.html
 ---
 <div id="dataset-info">
 This is my unskilled dataset of random numbers. Rejoice.</div>

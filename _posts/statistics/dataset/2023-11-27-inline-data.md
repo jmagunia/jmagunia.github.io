@@ -1,7 +1,7 @@
 ---
 title: Inline Data
 layout: page
-permalink: /dataset/:slug
+permalink: /dataset/:slug.html
 ---
 <div id="dataset-info">
 </div>

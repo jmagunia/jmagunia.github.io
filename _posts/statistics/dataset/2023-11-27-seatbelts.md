@@ -1,7 +1,7 @@
 ---
 title: Seatbelts
 layout: page
-permalink: /dataset/:slug
+permalink: /dataset/:slug.html
 ---
 <div id="dataset-info">
 <h2>Road Casualties in Great Britain 1969–84</h2>
